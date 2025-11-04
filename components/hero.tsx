@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -29,7 +30,7 @@ export function Hero() {
 
           {/* Hero Image Placeholder */}
           <div className="mt-12 rounded-xl overflow-hidden border border-border bg-muted shadow-lg">
-            <img src="/security-camera-surveillance-ai-monitoring-dashboa.jpg" alt="SecureVision Dashboard" className="w-full h-full object-cover" />
+            <Image src="/security-camera-surveillance-ai-monitoring-dashboa.jpg" alt="SecureVision Dashboard" width={1200} height={800} className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
