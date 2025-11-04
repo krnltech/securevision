@@ -12,7 +12,7 @@ WORKDIR /app
 COPY package.json package-lock.json* ./
 
 # Install dependencies
-RUN npm ci --legacy-peer-deps
+RUN npm install --legacy-peer-deps --no-audit --prefer-offline
 
 # Builder stage
 FROM base AS builder
