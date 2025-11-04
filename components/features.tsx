@@ -1,37 +1,35 @@
 import { Card } from "@/components/ui/card"
-import { Shield, Eye, Zap, Lock, AlertCircle, BarChart3 } from "lucide-react"
 
 export function Features() {
   const features = [
     {
-      icon: <Eye className="w-8 h-8 text-accent" />,
-      title: "Real-Time Detection",
-      description: "Instant threat detection powered by advanced AI algorithms",
+      title: "Real-Time Video Analysis",
+      description:
+        "AI software processes live video feeds instantly, rather than waiting for footage to be reviewed manually.",
     },
     {
-      icon: <Zap className="w-8 h-8 text-accent" />,
-      title: "Lightning Fast Response",
-      description: "Sub-second alerts to prevent security incidents before they escalate",
+      title: "Advanced Detection",
+      description:
+        "Recognize specific objects like weapons, identify suspicious activities like loitering or aggression, and track movement.",
     },
     {
-      icon: <Shield className="w-8 h-8 text-accent" />,
-      title: "Enterprise Security",
-      description: "Bank-level encryption and compliance with global security standards",
+      title: "Instant Threat Response",
+      description:
+        "Send real-time alerts to security personnel when anomalies or threats are detected, enabling immediate intervention.",
     },
     {
-      icon: <Lock className="w-8 h-8 text-accent" />,
-      title: "Privacy Protected",
-      description: "On-premise processing options to keep sensitive data secure",
+      title: "Restricted Area Control",
+      description:
+        "Monitor and control access to restricted areas for people, vehicles, animals and more with customizable rules.",
     },
     {
-      icon: <AlertCircle className="w-8 h-8 text-accent" />,
-      title: "Smart Alerts",
-      description: "Customizable notifications and threat classification by severity",
+      title: "Smart Pattern Learning",
+      description:
+        "AI identifies patterns over time, learns and adapts to specific environments, and detects subtle changes.",
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-accent" />,
-      title: "Detailed Analytics",
-      description: "Comprehensive reports and insights for security optimization",
+      title: "Intelligent Analytics",
+      description: "Comprehensive reports and insights for security optimization across all monitored locations.",
     },
   ]
 
@@ -50,7 +48,9 @@ export function Features() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="p-6 hover:shadow-lg transition">
-              <div className="mb-4">{feature.icon}</div>
+              <div className="w-10 h-10 rounded-full bg-primary/20 mb-4 flex items-center justify-center">
+                <span className="text-primary font-bold">{index + 1}</span>
+              </div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-foreground/70">{feature.description}</p>
             </Card>
